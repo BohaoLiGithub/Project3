@@ -1,0 +1,5 @@
+﻿  Window.cpp
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  Window.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  CppCli-WPF-App.vcxproj -> C:\File\CSE-687\Project3\CppCli-WPF-App\Debug\CppCli-WPF-App.exe
+  CppCli-WPF-App.vcxproj -> C:\File\CSE-687\Project3\CppCli-WPF-App\Debug\CppCli-WPF-App.pdb (Partial PDB)

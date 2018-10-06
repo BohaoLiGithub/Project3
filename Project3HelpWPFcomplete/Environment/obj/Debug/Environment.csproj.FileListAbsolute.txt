@@ -1,0 +1,12 @@
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\bin\Debug\Environment.dll
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\bin\Debug\Environment.pdb
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\obj\Debug\Environment.csprojResolveAssemblyReference.cache
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\obj\Debug\Environment.csproj.CoreCompileInputs.cache
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\obj\Debug\Environment.dll
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\Environment\obj\Debug\Environment.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\bin\Debug\Environment.dll
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\bin\Debug\Environment.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\obj\Debug\Environment.csproj.CoreCompileInputs.cache
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\obj\Debug\Environment.dll
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\obj\Debug\Environment.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Environment\obj\Debug\Environment.csprojResolveAssemblyReference.cache

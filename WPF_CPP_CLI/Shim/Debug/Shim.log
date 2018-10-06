@@ -1,0 +1,4 @@
+﻿  Shim.cpp
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+CppLibrary.lib(CppLibrary.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Shim.vcxproj -> C:\File\CSE-687\Project3\WPF_CPP_CLI\Debug\Shim.dll

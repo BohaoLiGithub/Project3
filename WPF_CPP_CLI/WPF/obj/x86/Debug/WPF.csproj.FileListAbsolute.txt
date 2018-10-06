@@ -1,0 +1,17 @@
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\bin\x86\Debug\WPF.exe.config
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\bin\x86\Debug\WPF.exe
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\bin\x86\Debug\WPF.pdb
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\bin\x86\Debug\Shim.dll
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\bin\x86\Debug\Shim.pdb
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.csprojResolveAssemblyReference.cache
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\MainWindow.g.cs
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\App.g.cs
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF_MarkupCompile.cache
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF_MarkupCompile.lref
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\MainWindow.baml
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.g.resources
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.Properties.Resources.resources
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.csproj.GenerateResource.Cache
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.csproj.CoreCompileInputs.cache
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.exe
+C:\File\CSE-687\Project3\WPF_CPP_CLI\WPF\obj\x86\Debug\WPF.pdb

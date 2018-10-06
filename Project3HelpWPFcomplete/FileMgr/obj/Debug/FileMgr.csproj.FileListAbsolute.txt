@@ -1,0 +1,32 @@
+C:\su\temp\NavigatorClient2\FileMgr\bin\Debug\FileMgr.exe.config
+C:\su\temp\NavigatorClient2\FileMgr\bin\Debug\FileMgr.exe
+C:\su\temp\NavigatorClient2\FileMgr\bin\Debug\FileMgr.pdb
+C:\su\temp\NavigatorClient2\FileMgr\obj\Debug\FileMgr.csproj.CoreCompileInputs.cache
+C:\su\temp\NavigatorClient2\FileMgr\obj\Debug\FileMgr.exe
+C:\su\temp\NavigatorClient2\FileMgr\obj\Debug\FileMgr.pdb
+C:\su\temp\NavigatorClient2\FileMgr\obj\Debug\FileMgr.csprojResolveAssemblyReference.cache
+C:\su\temp\NavigatorClient\FileMgr\bin\Debug\FileMgr.exe.config
+C:\su\temp\NavigatorClient\FileMgr\bin\Debug\FileMgr.exe
+C:\su\temp\NavigatorClient\FileMgr\bin\Debug\FileMgr.pdb
+C:\su\temp\NavigatorClient\FileMgr\obj\Debug\FileMgr.csprojResolveAssemblyReference.cache
+C:\su\temp\NavigatorClient\FileMgr\obj\Debug\FileMgr.csproj.CoreCompileInputs.cache
+C:\su\temp\NavigatorClient\FileMgr\obj\Debug\FileMgr.exe
+C:\su\temp\NavigatorClient\FileMgr\obj\Debug\FileMgr.pdb
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\bin\Debug\FileMgr.exe.config
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\bin\Debug\FileMgr.exe
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\bin\Debug\FileMgr.pdb
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\bin\Debug\Environment.dll
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\bin\Debug\Environment.pdb
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\obj\Debug\FileMgr.csprojResolveAssemblyReference.cache
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\obj\Debug\FileMgr.csproj.CoreCompileInputs.cache
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\obj\Debug\FileMgr.exe
+C:\File\CSE-681\Code\Code Demo\NavigatorClientAndServer\FileMgr\obj\Debug\FileMgr.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\bin\Debug\FileMgr.exe.config
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\bin\Debug\FileMgr.exe
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\bin\Debug\FileMgr.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\bin\Debug\Environment.dll
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\bin\Debug\Environment.pdb
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\obj\Debug\FileMgr.csprojResolveAssemblyReference.cache
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\obj\Debug\FileMgr.csproj.CoreCompileInputs.cache
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\obj\Debug\FileMgr.exe
+C:\File\CSE-687\Project3\Project3HelpWPFcomplete\FileMgr\obj\Debug\FileMgr.pdb

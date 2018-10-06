@@ -1,0 +1,15 @@
+Steps to Build this Demo
+========================
+Note: The order of these steps is important
+1. Right-click on CppLibrary project and select build
+2. Right-click on Shim project and select build
+3. Right-click on WPF project and select build
+
+If you get build failures, that's probably because you don't have the latest SDK version installed.
+You can either:
+1. open each of the three project's properties and set the SDK version to one you have
+   - you just select from the drop-down list
+or:
+2. Update your IDE:
+   - Tools > Extensions and Updates > Updates
+     Note that this takes a while to complete

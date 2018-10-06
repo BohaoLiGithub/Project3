@@ -1,0 +1,68 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="639.4" Loaded="Window_Loaded" Closed="Window_Closed">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <Menu Grid.Row="0">
+      <MenuItem Header="_File">
+        <MenuItem Header="_Browse"/>
+        <Separator/>
+        <MenuItem Header="_Exit"/>
+      </MenuItem>
+      <MenuItem Header="_Edit">
+        
+      </MenuItem>
+      <MenuItem Header="_Connect">
+        
+      </MenuItem>
+      <MenuItem Header="_Help">
+        
+      </MenuItem>
+    </Menu>
+
+    <TabControl Grid.Row="1" Name="tabControl">
+      <TabItem Header="Check-In"></TabItem>
+      <TabItem Header="Check-Out"></TabItem>
+      <TabItem Header="Browse"></TabItem>
+      <TabItem Header="View File"></TabItem>
+      <TabItem Header="View Metadata"></TabItem>
+      <TabItem Header="Connect"></TabItem>
+      <TabItem Header="C++/CLI Shim Test" HorizontalAlignment="Right">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+
+          <Label Grid.Row="0" Grid.Column="0" Content="Message to C++ Code: "/>
+          <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Name="txtMsg" Text="Message from WPF App" KeyDown="TextBox_KeyDown"/>
+          <Button Grid.Row="0" Grid.Column="2" Margin="5" Content="Send" Width="80" Click="Button_Click"/>
+          
+          <Label Grid.Row="1" Grid.ColumnSpan="3" Content="Messages from native C++ code:"/>
+          
+          <ListBox Grid.Row="2" Grid.ColumnSpan="3" Name="lstBoxFilesForCheckin" Margin="5"/>
+        </Grid>
+      </TabItem>
+    </TabControl>
+
+    <StatusBar Grid.Row="2">
+      <TextBlock Name="statusBarText" Text="This is a status bar"/>
+    </StatusBar>
+  </Grid>
+</Window>

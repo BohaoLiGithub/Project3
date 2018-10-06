@@ -1,0 +1,4 @@
+﻿  Translater.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+Utilities.lib(Utilities.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Translater.vcxproj -> C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Debug\Translater.dll
+  Translater.vcxproj -> C:\File\CSE-687\Project3\Project3HelpWPFcomplete\Debug\Translater.pdb (Partial PDB)

@@ -1,0 +1,351 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="850.4" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Browse"/>
+                <Separator/>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+
+            </MenuItem>
+            <MenuItem Header="_Connect">
+
+            </MenuItem>
+            <MenuItem Header="_Help">
+
+            </MenuItem>
+        </Menu>
+
+        <TabControl Grid.Row="1" Name="tabControl">
+            <!-- Check-in Tab -->
+            <TabItem Header="Check-In">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="178.333"/>
+                        <ColumnDefinition Width="*" MinWidth="222"/>
+                        <ColumnDefinition Width="*" MinWidth="214.667"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Local Files (Double clicking can view contents)" Grid.ColumnSpan="2" Margin="0,0,0.333,0"></Label>
+                    <Grid Grid.Row="1" Grid.Column="0" Background="#ccc" Grid.ColumnSpan="2" Margin="0,0,0.333,-0.333">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Dirs</TextBlock>
+                            <Button DockPanel.Dock="Right"  Margin="2" Content="Up" FontSize="10" Width="60" Click="localUp_Click"></Button>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <Border  BorderThickness="10" Background="#000" Grid.RowSpan="2" >
+                                <ListBox x:Name="localDirs" MouseDoubleClick="localDirs_MouseDoubleClick"  />
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1" Background="#ccc" Grid.ColumnSpan="2" Margin="178,0,0.333,-0.333">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Files</TextBlock>
+                            <Button DockPanel.Dock="Right"  Margin="2" Content="Top" FontSize="10" Width="60" Click="localTop_Click" ></Button>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <Border BorderThickness="10" Background="#000"  Grid.RowSpan="2" >
+                                <ListBox x:Name="localFiles" MouseDoubleClick="localFiles_MouseDoubleClick" ></ListBox>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="2" Background="#ccc" Grid.ColumnSpan="2" Margin="221.667,0,0,-0.333">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Selected Files</TextBlock>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <Border BorderThickness="10" Background="#000"  Grid.RowSpan="2" >
+                                <ListBox x:Name="SelectedFiles"  ></ListBox>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="4" Background="#ccc" Margin="0,0,0,-0.333">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="71*"></RowDefinition>
+                            <RowDefinition Height="76*"></RowDefinition>
+                            <RowDefinition Height="125*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0" Margin="0,0,-0.333,0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Metadata</TextBlock>
+                        </DockPanel>
+                        <Grid Grid.Row="1" Margin="0,0,-0.333,0.333">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <!-- label -->
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0">
+                                <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="12" FontWeight="Bold">Author:</TextBlock>
+                            </DockPanel>
+                            <DockPanel Grid.Row="1">
+                                <TextBox DockPanel.Dock="Left" Grid.Row="0" Grid.Column="1" Name="Author_checkin" Margin="0,0,0,10"/>
+                            </DockPanel>
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="0,0.667,-0.333,0.333">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="46*"/>
+                                <ColumnDefinition Width="165*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <!-- label -->
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,-0.333,55.667" Grid.RowSpan="2">
+                                <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="12" FontWeight="Bold">Package Name:</TextBlock>
+                            </DockPanel>
+                            <DockPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0.333,-0.333,-0.333">
+                                <TextBox DockPanel.Dock="Left" Grid.Row="0" Grid.Column="1" Name="package" Margin="0,0,0,10"   />
+                            </DockPanel>
+
+                        </Grid>
+                        <Grid Grid.Row="3" Margin="0,1.667,-0.333,-0.333">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <!-- label -->
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0">
+                                <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="12" FontWeight="Bold">Description:</TextBlock>
+                            </DockPanel>
+                            <DockPanel Grid.Row="1">
+                                <TextBox DockPanel.Dock="Left" Grid.Row="0" Grid.Column="1" Name="description" Margin="0,0,0,10.333"   />
+                            </DockPanel>
+                        </Grid>
+
+                    </Grid>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="70.667,5,71.333,5" Content="Add" Width="80" Click="Add_Click"/>
+                    <Button Grid.Row="0" Grid.Column="3" Margin="67.667,5,67,5" Content="Delete" Width="80" Click="Delete_Click"/>
+                    <Button Grid.Row="0" Grid.Column="4" Margin="34,5" Content="Check In" Width="80" Click="CheckIn_Click"/>
+                </Grid>
+
+            </TabItem>
+
+            <!-- Check-out Tab -->
+            <TabItem Header="Check-Out">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Repository Files: (Double clicking file can view file content)"></Label>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Label Content="File Author:"></Label>
+                        <TextBox Name="Author_checkout" Margin="77,5,169.667,5"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0" Background="#ccc">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Dirs</TextBlock>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <Border  BorderThickness="10" Background="#000" Grid.RowSpan="2" >
+                                <ListBox x:Name="DirList" MouseDoubleClick="DirList_MouseDoubleClick"  />
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1" Background="#ccc">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Left" Margin="10 0" VerticalAlignment="Center" FontSize="10" FontWeight="Bold">Files</TextBlock>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <Border BorderThickness="10" Background="#000"  Grid.RowSpan="2" >
+                                <ListBox x:Name="FileList" MouseDoubleClick="FileList_MouseDoubleClick" ></ListBox>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                    <Button Grid.Row="0" Grid.Column="1" Margin="279.333,5,60,5" Content="Check Out" Width="80" Click="CheckOut_Click"/>
+
+                </Grid>
+
+            </TabItem>
+
+            <!-- Browse Tab -->
+            <TabItem Header="Browse">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <DockPanel Grid.Row="0">
+                            <TextBlock DockPanel.Dock="Top" Margin="120,0,10,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold">Search:</TextBlock>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <TextBox x:Name="ResultList" Margin="18"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="2">
+                        <Button Name="search" Content="submit" Margin="0,20,240.333,20" Click="Browse_click"></Button>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!-- file list -->
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Label Content="Search results(Package): "/>
+                        </Grid>
+                        <DockPanel Grid.Row="1">
+                            <Border BorderThickness="10" Background="#000"  Grid.RowSpan="2" >
+                                <ListBox x:Name="PackageList" MouseDoubleClick="DirList_MouseDoubleClick" ></ListBox>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <!-- label -->
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Content="Description: "/>
+                        <DockPanel Grid.Row="1">
+                            <Border BorderThickness="10" Background="#000"  Grid.RowSpan="2" >
+                                <ListBox x:Name="Description"></ListBox>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+
+            </TabItem>
+            <!-- Metadata Tab -->
+            <TabItem Header="View Metadata">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" >
+                        <Label Content="package name:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="package_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0" >
+                        <Label Content="file name:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="file_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                    <Button Grid.Row="2" Grid.Column="0" Content="Search" Click="search_meta" Margin="132,15,141,15"></Button>
+                    <Grid Grid.Row="0" Grid.Column="1" >
+                        <Label Content="Author:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="author_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1" >
+                        <Label Content="Date time:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="datetime_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="1" >
+                        <Label Content="Description:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="descrip_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="3" Grid.Column="1" >
+                        <Label Content="Status:" Margin="15,15,285,15"></Label>
+                        <TextBox x:Name="status_meta" Margin="120,15,40,15"></TextBox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Connect">
+                <Grid>
+                    <DockPanel>
+                        <Button Content="connect" Margin="100,100,100,173.667" Width="283" Click="connect_server"></Button>
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+            <!--<TabItem Header="C++/CLI Shim Test" HorizontalAlignment="Right">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Message to C++ Code: "/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Name="txtMsg" Text="Message from WPF App" KeyDown="TextBox_KeyDown"/>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="5" Content="Send" Width="80" Click="Button_Click"/>
+
+                    <Label Grid.Row="1" Grid.ColumnSpan="3" Content="Messages from native C++ code:"/>
+
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="3" Name="lstBoxFilesForCheckin" Margin="5"/>
+                </Grid>
+            </TabItem>-->
+        </TabControl>
+
+        <StatusBar Grid.Row="2">
+            <TextBlock Name="statusBarText" Text="This is a status bar"/>
+        </StatusBar>
+    </Grid>
+</Window>
